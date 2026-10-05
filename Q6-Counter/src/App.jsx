@@ -125,68 +125,6 @@ export default function App() {
         </div>
       </main>
 
-      {/* Code Inspection Snippet */}
-      <section className="code-card">
-        <div className="code-header">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
-          <span>React Hook Implementation</span>
-        </div>
-        <pre className="code-snippet">
-{`const [count, setCount] = useState(0);
-
-// Handlers
-const handleIncrement = () => setCount((prev) => prev + ${step});
-const handleDecrement = () => setCount((prev) => prev - ${step});
-const handleReset     = () => setCount(0);`}
-        </pre>
-      </section>
-
-      {/* Concepts Section */}
-      <section className="concepts-card">
-        <div className="concepts-header">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
-          <h2>Concepts Used</h2>
-        </div>
-        <div className="concepts-grid">
-          <div className="concept-item">
-            <div className="concept-icon">&#9879;</div>
-            <div className="concept-info">
-              <h3>useState</h3>
-              <p>Declares a stateful counter value preserved across render cycles.</p>
-            </div>
-          </div>
-
-          <div className="concept-item">
-            <div className="concept-info">
-              <h3>State Updates</h3>
-              <p>Uses functional updaters <code>setCount(prev =&gt; prev &plusmn; step)</code> to guarantee safe concurrency.</p>
-            </div>
-          </div>
-
-          <div className="concept-item">
-            <div className="concept-icon">&#9654;</div>
-            <div className="concept-info">
-              <h3>Event Handling</h3>
-              <p>Binds button <code>onClick</code> events cleanly to trigger corresponding state mutators.</p>
-            </div>
-          </div>
-
-          <div className="concept-item">
-            <div className="concept-icon">&#8635;</div>
-            <div className="concept-info">
-              <h3>Component Re-rendering</h3>
-              <p>React calculates virtual DOM diffs and smoothly animates the new count value into view.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <footer className="assignment-footer">
         <p>Web Development Practical Lab &bull; Question 6 &bull; Independent Vite + React App</p>
       </footer>

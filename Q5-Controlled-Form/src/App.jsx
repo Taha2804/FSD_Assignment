@@ -202,59 +202,9 @@ export default function App() {
                 <span className="info-value">{formData.city || <em className="placeholder">—</em>}</span>
               </div>
             </div>
-
-            {/* Current State JSON inspector */}
-            <div className="state-snippet">
-              <div className="snippet-title">React State Object:</div>
-              <pre>{JSON.stringify(formData, null, 2)}</pre>
-            </div>
           </div>
         </section>
       </div>
-
-      {/* Concepts Section */}
-      <section className="concepts-card">
-        <div className="concepts-header">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
-          <h2>Concepts Used</h2>
-        </div>
-        <div className="concepts-grid">
-          <div className="concept-item">
-            <div className="concept-icon">&#9881;</div>
-            <div className="concept-info">
-              <h3>Controlled Components</h3>
-              <p>Form inputs don't maintain their own DOM state; they are completely controlled by React.</p>
-            </div>
-          </div>
-
-          <div className="concept-item">
-            <div className="concept-icon">{`{ }`}</div>
-            <div className="concept-info">
-              <h3>useState</h3>
-              <p>Holds the single source of truth for the entire form object across re-renders.</p>
-            </div>
-          </div>
-
-          <div className="concept-item">
-            <div className="concept-icon">v</div>
-            <div className="concept-info">
-              <h3>value &amp; onChange</h3>
-              <p><code>value</code> binds input text to state; <code>onChange</code> updates state on each keystroke.</p>
-            </div>
-          </div>
-
-          <div className="concept-item">
-            <div className="concept-icon">&#9889;</div>
-            <div className="concept-info">
-              <h3>Real-Time Rendering</h3>
-              <p>Any state change triggers a reactive render pass that updates the preview instantly.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <footer className="assignment-footer">
         <p>Web Development Practical Lab &bull; Question 5 &bull; Independent Vite + React App</p>

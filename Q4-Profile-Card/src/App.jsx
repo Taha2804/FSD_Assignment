@@ -76,55 +76,6 @@ export default function App() {
         />
       </main>
 
-      {/* Interactive Props Inspector */}
-      <section className="props-inspector">
-        <div className="inspector-header">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
-          <h3>Active JSX Props Passed to &lt;ProfileCard /&gt;</h3>
-        </div>
-        <pre className="code-block">
-{`<ProfileCard
-  name="${activeProfile.name}"
-  role="${activeProfile.role}"
-  image="${activeProfile.image.slice(0, 32)}..."
-  description="${activeProfile.description}"
-  location="${activeProfile.location}"
-/>`}
-        </pre>
-      </section>
-
-      {/* Educational Concepts Section */}
-      <section className="concepts-card">
-        <div className="concepts-header">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
-          <h2>Concept Used: React Props</h2>
-        </div>
-        <div className="concepts-content">
-          <p className="concept-explanation">
-            <strong>What are Props?</strong> Props (short for <em>properties</em>) are arguments passed into React components. 
-            They are passed from parent components (here, <code>App.jsx</code>) down to child components 
-            (<code>ProfileCard.jsx</code>) via JSX attributes.
-          </p>
-          <ul className="concept-bullets">
-            <li>
-              <strong>Unidirectional Data Flow:</strong> Data travels downward from parent to child. The <code>ProfileCard</code> component does not hardcode user information; it dynamically renders whatever data it receives.
-            </li>
-            <li>
-              <strong>Reusability:</strong> A single component template renders completely different students or team members simply by passing new prop objects.
-            </li>
-            <li>
-              <strong>Immutability:</strong> In React, props are read-only. A child component must never modify its received props directly.
-            </li>
-          </ul>
-        </div>
-      </section>
-
       <footer className="assignment-footer">
         <p>Web Development Practical Lab &bull; Question 4 &bull; Independent Vite + React App</p>
       </footer>
