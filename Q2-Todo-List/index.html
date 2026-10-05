@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2: DOM-Based To-Do List | Web Dev Practical</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-container">
+    <header class="assignment-header">
+      <div class="badge">Practical Assignment 02</div>
+      <h1>DOM-Based Task Manager</h1>
+      <p class="subtitle">Pure JavaScript DOM manipulation with dynamic creation, toggling, and removal of nodes.</p>
+    </header>
+
+    <main class="todo-card">
+      <div class="card-header">
+        <div class="stats-badge">
+          <span class="pulse-dot"></span>
+          <span id="task-counter">0 tasks remaining</span>
+        </div>
+        <div class="filter-summary" id="task-summary">0 of 0 completed</div>
+      </div>
+
+      <div class="todo-body">
+        <!-- Add Task Form -->
+        <form id="todo-form" class="todo-input-form" onsubmit="return false;">
+          <div class="input-wrapper">
+            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="task-input" 
+              placeholder="What needs to be done? (e.g., Complete Web Dev Lab)" 
+              autocomplete="off"
+              maxlength="100"
+            />
+          </div>
+          <button type="submit" id="btn-add-task" class="btn btn-add">
+            <span>Add Task</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Task List Container -->
+        <div class="list-wrapper">
+          <ul id="task-list" class="task-list">
+            <!-- Dynamically populated via createElement & appendChild -->
+          </ul>
+
+          <!-- Empty State -->
+          <div id="empty-state" class="empty-state">
+            <div class="empty-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4"></path>
+                <path d="m4.93 10.93 2.83 2.83"></path>
+                <path d="M2 18h4"></path>
+                <path d="M20 18h2"></path>
+                <path d="m19.07 10.93-2.83 2.83"></path>
+                <path d="M22 22H2"></path>
+                <path d="m16 6-4 4-4-4"></path>
+                <path d="M16 18a4 4 0 0 0-8 0"></path>
+              </svg>
+            </div>
+            <h3>No tasks yet</h3>
+            <p>Type a task above and press "Add Task" or hit Enter to begin.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Concepts Section -->
+    <section class="concepts-card">
+      <div class="concepts-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+        </svg>
+        <h2>Concepts Used</h2>
+      </div>
+      <div class="concepts-grid">
+        <div class="concept-item">
+          <div class="concept-icon">&lt;&gt;</div>
+          <div class="concept-info">
+            <h3>DOM Manipulation</h3>
+            <p>Accesses HTML elements dynamically using <code>document.getElementById()</code> and queries.</p>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-icon">+</div>
+          <div class="concept-info">
+            <h3>createElement() &amp; appendChild()</h3>
+            <p>Generates fresh <code>&lt;li&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;span&gt;</code> nodes in memory and attaches them.</p>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-icon">&#9745;</div>
+          <div class="concept-info">
+            <h3>classList &amp; Transitions</h3>
+            <p>Toggles <code>completed</code> styling dynamically to apply strikethroughs, opacity shifts, and animations.</p>
+          </div>
+        </div>
+
+        <div class="concept-item">
+          <div class="concept-icon">&times;</div>
+          <div class="concept-info">
+            <h3>remove() &amp; Event Listeners</h3>
+            <p>Removes task items from the DOM tree with an animated exit transition via <code>taskItem.remove()</code>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="assignment-footer">
+      <p>Web Development Practical Lab &bull; Question 2 &bull; Vanilla Stack (No Frameworks)</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Web Development Practical Assignments",
+  "description": "Comprehensive practical lab suite with vanilla HTML/CSS/JS exercises and independent React Vite applications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
